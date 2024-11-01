@@ -16,10 +16,10 @@ public class NewController {
     @Autowired
     NewService newService;
 
-    @GetMapping("/get")
-    public NewsResponse getNews(@RequestParam String country, @RequestParam String categor, @RequestParam String apiKey){
+    @GetMapping()
+    public NewsResponse getNews(@RequestParam String country, @RequestParam String category, @RequestParam String apiKey){
 
 
-        return newService.getNews(country, categor, apiKey);
+        return newService.getNews(country, category, apiKey);
     }
 }
